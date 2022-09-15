@@ -1,8 +1,11 @@
-from email.mime import image
+# from email.mime import image
 import numpy
 import cv2 as cd
 image  = cd.imread("halo.jpg")
-gray = cd.cvtColor(image, cd.COLOR_BGR2GRAY)
-cd.imshow("daun", gray)
+x = len(image[0])
+y = len(image)
+cd.imshow("daun", image)
+print(x)
+print(y)
 cd.waitKey(0)
 cd.destroyAllWindows()
