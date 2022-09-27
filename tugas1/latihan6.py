@@ -5,10 +5,12 @@ from PIL import Image
 def  pengurangan_dua_citra(citra_A,  citra_B, citra_hasil):
     # citra a 
     CITRA_A =  Image.open(citra_A)
+    # CITRA_A = CITRA_A.convert('L')
     PIXEL_A = CITRA_A.load()
     
     # citra b
     CITRA_B =  Image.open(citra_B)
+    # CITRA_A = CITRA_A.convert('L')
     PIXEL_B = CITRA_B.load()
     
     # membuat dua ukuran citra
@@ -31,7 +33,5 @@ def  pengurangan_dua_citra(citra_A,  citra_B, citra_hasil):
             
     CITRA_HASIL.save(citra_hasil)
 
-pengurangan_dua_citra("image/img1.jpg", "image/imgkosong.jpg","hasil_citra.jpg")
+pengurangan_dua_citra("image/img1.jpg", "image/imgkosong.jpg","hasil.jpg")
             
-    
-    
