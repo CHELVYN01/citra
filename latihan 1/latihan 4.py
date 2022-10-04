@@ -1,11 +1,7 @@
 from scipy import misc
 import matplotlib.pyplot as plt
-import cv2 as cv
 
-img = plt.imread('halo.jpg')
+ascent = misc.ascent()
 plt.gray()
-print(img)
-cv.imshow('daun',img)
-cv.waitKey(1)
-cv.destroyAllWindows()
-
+plt.imshow(ascent)
+plt.show()
