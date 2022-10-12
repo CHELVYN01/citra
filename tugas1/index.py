@@ -10,6 +10,6 @@ c = image - 255
 # membaca gambar 
 cv.imwrite("satuS.jpg",image)
 
-cv.imshow("gamabr",c)
+cv.imshow("gamabr",image)
 cv.waitKey(0)
 cv.destroyAllWindows()
