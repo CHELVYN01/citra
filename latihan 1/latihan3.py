@@ -13,3 +13,4 @@ for i,col in enumerate(color):
     plt.plot(histr,color = col)
     plt.xlim([0,256])
 cv2.imshow("daun",img)
+destroAllWindows()
