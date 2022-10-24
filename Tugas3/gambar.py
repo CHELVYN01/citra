@@ -5,8 +5,9 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 
-img = cv.imread("image/imagedua.jpeg",0)
-plt.hist(img.ravel(), 256,[0,256])
+gambaar = cv.imread("image/imagedua.jpeg",0)
+img = cv.resize(gambaar,None,fx=0.5,fy=0.5 , interpolation= cv.INTER_CUBIC)
+plt.hist(gambaar.ravel(), 256,[0,256])
 plt.show()
 
 imgMatrx = img
@@ -35,13 +36,13 @@ def  avg(T):
 
 print(avg(T))
 
-nilaiAmbang = avg(T)
+nilaiAmbang = 86
 for i in range(len(imgMatrx)):
     for j in range(len(imgMatrx[i])):
         if(imgMatrx[i,j] < nilaiAmbang):
             imgMatrx[i,j] = 0
         else:
             imgMatrx[i,j] = 255
-cv.imshow("daun",imgMatrx)
+cv.imshow("hp",imgMatrx)
 cv.waitKey(0)
 cv.destroyAllWindows()
